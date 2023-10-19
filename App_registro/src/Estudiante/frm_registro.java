@@ -43,10 +43,10 @@ boolean bln_sw = false;
         jPanel3 = new javax.swing.JPanel();
         btn_nuevo = new javax.swing.JButton();
         btn_salir = new javax.swing.JButton();
-        btn_actualizar = new javax.swing.JButton();
         btn_consultar = new javax.swing.JButton();
         btn_grabar = new javax.swing.JButton();
         btn_guardar = new javax.swing.JButton();
+        btn_actualizar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -177,16 +177,6 @@ boolean bln_sw = false;
             }
         });
 
-        btn_actualizar.setBackground(new java.awt.Color(204, 255, 204));
-        btn_actualizar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btn_actualizar.setText("Actualizar");
-        btn_actualizar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btn_actualizar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_actualizarActionPerformed(evt);
-            }
-        });
-
         btn_consultar.setBackground(new java.awt.Color(204, 255, 204));
         btn_consultar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btn_consultar.setText("Consultar");
@@ -217,6 +207,16 @@ boolean bln_sw = false;
             }
         });
 
+        btn_actualizar.setBackground(new java.awt.Color(204, 255, 204));
+        btn_actualizar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btn_actualizar.setText("Actualizar");
+        btn_actualizar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_actualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_actualizarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -229,12 +229,14 @@ boolean bln_sw = false;
                         .addGap(16, 16, 16))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btn_actualizar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btn_grabar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btn_consultar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                            .addComponent(btn_consultar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
                             .addComponent(btn_nuevo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btn_guardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(15, 15, 15))))
+                        .addGap(15, 15, 15))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(btn_actualizar)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -242,8 +244,8 @@ boolean bln_sw = false;
                 .addContainerGap()
                 .addComponent(btn_nuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btn_actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(btn_consultar, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btn_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -264,7 +266,7 @@ boolean bln_sw = false;
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -287,13 +289,6 @@ boolean bln_sw = false;
     private void btn_nuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_nuevoActionPerformed
     fnt_limpiar();  
     }//GEN-LAST:event_btn_nuevoActionPerformed
-
-    private void btn_actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_actualizarActionPerformed
-    registro[int_pos].setInt_edad(Integer.parseInt(txt_edad.getText()));
-    registro[int_pos].setStr_contacto(txt_contacto.getText());
-    registro[int_pos].setStr_institucion(txt_institucion.getText());
-    registro[int_pos].setStr_nombre(txt_nombre.getText());
-    }//GEN-LAST:event_btn_actualizarActionPerformed
 
     private void btn_consultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_consultarActionPerformed
       bln_sw = false;
@@ -345,6 +340,13 @@ boolean bln_sw = false;
             }
         }
     }//GEN-LAST:event_btn_guardarActionPerformed
+
+    private void btn_actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_actualizarActionPerformed
+    registro[int_pos].setInt_edad(Integer.parseInt(txt_edad.getText()));
+    registro[int_pos].setStr_contacto(txt_contacto.getText());
+    registro[int_pos].setStr_institucion(txt_institucion.getText());
+    registro[int_pos].setStr_nombre(txt_nombre.getText());
+    }//GEN-LAST:event_btn_actualizarActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
